@@ -80,14 +80,14 @@
 
 # Try to auto-detect target OS.
 OS = $(shell uname)
-PREFIX ?= /usr
+PREFIX ?= /home/will/.local
 LIB ?= lib
 BIN ?= bin
 INCLUDE ?= include
 PIC = -fPIC
 EXE =
 WGET = wget --no-check-certificate --quiet -O
-PLUGINDIR = $(shell gimptool-2.0 --gimpplugindir)/plug-ins
+PLUGINDIR = $(shell gimptool-2.99 --gimpplugindir)/plug-ins
 BASH_COMPLETIONSDIR = $(shell pkg-config --variable completionsdir bash-completion || echo $(PREFIX)/share/bash-completion/completions)
 VERSION = $(shell grep 'gmic_version\ ' gmic.h | tail -c4 | head -c3)
 VERSION1 = $(shell grep 'gmic_version\ ' gmic.h | tail -c4 | head -c1)
